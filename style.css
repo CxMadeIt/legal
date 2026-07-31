@@ -1,0 +1,122 @@
+/* Shared stylesheet for all CxMadeIt app legal pages.
+   Theme-aware, no external fonts or assets — loads instantly anywhere. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #14171f;
+  --text-muted: #5c6474;
+  --accent: #e2604a;
+  --border: #e3e6ec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1420;
+    --surface: #171d2c;
+    --text: #eef1f6;
+    --text-muted: #9aa3b5;
+    --accent: #ff7d64;
+    --border: #232b3d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.2rem 0 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+p, li { color: var(--text); }
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+.effective {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+.lede {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  margin: 0 0 2rem;
+}
+
+.lede p { margin: 0; }
+
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+/* Back-link / breadcrumb above the title */
+.crumb {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+.crumb:hover { color: var(--accent); }
+
+/* Card list used on the index pages */
+.cards {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cards a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.95rem 1.15rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.cards a:hover { border-color: var(--accent); }
+
+.cards strong { display: block; font-size: 1rem; }
+
+.cards span {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
