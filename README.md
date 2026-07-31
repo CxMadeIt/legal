@@ -14,6 +14,7 @@ Base: `https://cxmadeit.github.io/legal/`
 | App | Privacy | Terms | Support |
 |---|---|---|---|
 | VitaMaxx | `/legal/vitamaxx/privacy/` | `/legal/vitamaxx/terms/` | `/legal/vitamaxx/support/` |
+| Pomo Pomo Arcade | `/legal/pomopomoarcade/privacy/` | `/legal/pomopomoarcade/terms/` | `/legal/pomopomoarcade/support/` |
 
 ## First-time publish
 
