@@ -12,28 +12,30 @@
 <a class="crumb" href="../">← VitaMaxx</a>
 
 <h1>VitaMaxx Privacy Policy</h1>
-<p class="effective">Effective date: August 11, 2026</p>
+<p class="effective">Effective date: August 20, 2026</p>
 
 <div class="lede">
-<p>The short version: VitaMaxx has no accounts and no ads. Your meal history
-and progress stay on your device. When you choose to scan a food or water
-photo, a resized copy is securely processed only to produce your estimate.
-Customer scans are not shared for AI model training.</p>
+<p>The short version: VitaMaxx has no accounts, ads, analytics or tracking.
+Your results and progress stay on your device. Food and water photos are sent
+securely to Cloudflare Workers AI only to generate an estimate. Cloudflare
+states that Workers AI customer content is not used to train AI models or
+improve Cloudflare or third-party services without explicit consent.</p>
 </div>
 
 <h2>1. Information we handle</h2>
 
 <p><strong>Food and water photos.</strong> When you actively scan a meal or
 water container, VitaMaxx redraws and resizes the image, which removes ordinary
-photo metadata, then transmits it securely through our processing provider
-(Cloudflare) to our AI provider (OpenAI) solely to estimate nutrient or water
-content. VitaMaxx does not send your name, email, advertising identifier or an
-account ID with the photo. A copy of a meal photo is stored locally on your
-device so you can see your meal history.</p>
+photo metadata, then transmits it securely to VitaMaxx's serverless Cloudflare
+Worker and Cloudflare Workers AI solely to estimate nutrient content or water
+volume. VitaMaxx does not send your name, email, account ID, device ID or
+advertising ID with the photo. A copy of a meal photo may be stored locally on
+your device so you can see your meal history.</p>
 
-<p><strong>Scan results and preferences.</strong> Nutrient estimates, portions,
-goals, streaks and settings are stored on your device. Our processing service
-does not create a VitaMaxx account or permanently store your photo or result.</p>
+<p><strong>Scan results and preferences.</strong> Nutrient estimates, water
+logs, goals, streaks and settings are stored on your device. The Cloudflare
+Worker does not save photos or results to a database, object store, log or
+other persistent storage.</p>
 
 <p><strong>What we do NOT collect:</strong> your name, email, contacts,
 location, health records, advertising identifiers, or any analytics that track
@@ -41,25 +43,25 @@ you across apps.</p>
 
 <h2>2. How photos are processed</h2>
 
-<p>Photos are sent over encrypted connections through Cloudflare to OpenAI's
-API. OpenAI API data sharing is disabled for VitaMaxx production traffic, so
-customer photos and results are not used to train OpenAI models. VitaMaxx
-requests non-persistent responses and does not store photos or results in its
-processing service.</p>
+<p>Photos are sent over encrypted connections to a serverless API operated by
+VitaMaxx on Cloudflare, then processed by Cloudflare Workers AI using the Llama
+4 Scout vision model. The image is used to produce one response and is not
+written to persistent server storage by VitaMaxx.</p>
 
-<p>OpenAI may retain API inputs and outputs in abuse-monitoring logs for up to
-30 days unless a shorter retention control applies, after which they are
-deleted under OpenAI's policies. Cloudflare may process limited network
-information needed to deliver, secure and rate-limit the request. VitaMaxx
-does not use either provider for advertising or cross-app tracking.</p>
+<p>Cloudflare identifies prompts, image submissions and outputs as customer
+content. Cloudflare states that it does not use Workers AI customer content to
+train models or improve Cloudflare or third-party services without explicit
+consent. VitaMaxx does not place customer content in Cloudflare storage
+products. Network providers necessarily receive technical connection data such
+as an IP address to deliver an internet request, but VitaMaxx does not store,
+profile, sell or use that information for advertising or tracking.</p>
 
 <h2>3. Your choices and control</h2>
 
 <ul>
 <li>You can delete all app data at any time in <strong>You → Delete all my
-data</strong>. This removes every scan, locally saved photo and preference from
-your device. It does not accelerate the automatic expiration of provider
-security logs.</li>
+data</strong>. This removes every scan, locally saved photo, water log and
+preference from your device.</li>
 <li>Deleting the app removes all locally stored data.</li>
 <li>Camera and photo library access are used only when you actively scan and
 can be managed in iOS Settings.</li>
